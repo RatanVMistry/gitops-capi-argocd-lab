@@ -157,6 +157,8 @@ If you want to be extra strict, also confirm Docker Desktop has the RAM and CPU 
 
 ## 5. Part A — bootstrap `mgmt` — <a name="5-part-a"></a>
 
+If you want the shortest path, run `./scripts/bootstrap-mgmt.sh` from the repo root. The commands below are the same flow spelled out manually so you can see what the script is doing.
+
 ```bash
 cat > kind-mgmt.yaml <<'EOF'
 kind: Cluster
