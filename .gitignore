@@ -1,0 +1,4 @@
+*.kubeconfig
+kind-*.yaml
+*.swp
+.DS_Store
