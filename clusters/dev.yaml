@@ -1,6 +1,8 @@
 apiVersion: cluster.x-k8s.io/v1beta2
 kind: Cluster
 metadata:
+  labels:
+    cni: calico
   name: dev
   namespace: default
 spec:

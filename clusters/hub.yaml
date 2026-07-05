@@ -367,6 +367,8 @@ spec:
 apiVersion: cluster.x-k8s.io/v1beta2
 kind: Cluster
 metadata:
+  labels:
+    cni: calico
   name: hub
   namespace: default
 spec:
