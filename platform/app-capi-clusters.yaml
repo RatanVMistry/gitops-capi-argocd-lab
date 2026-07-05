@@ -1,0 +1,22 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: capi-clusters
+  namespace: argocd
+spec:
+  project: default
+  source:
+    repoURL: https://github.com/RatanVMistry/gitops-capi-argocd-lab.git
+    targetRevision: main
+    path: clusters
+    directory:
+      recurse: true
+  destination:
+    name: kind-mgmt
+    namespace: default
+  syncPolicy:
+    automated:
+      prune: false
+      selfHeal: true
+    syncOptions:
+      - CreateNamespace=false

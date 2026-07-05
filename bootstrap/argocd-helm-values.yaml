@@ -1,0 +1,9 @@
+server:
+  service:
+    type: ClusterIP
+configs:
+  params:
+    server.insecure: true
+applicationSet:
+  args:
+    - --enable-progressive-syncs
